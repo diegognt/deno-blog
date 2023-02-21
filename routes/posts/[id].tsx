@@ -4,6 +4,7 @@ import { Post } from "../../services/posts/@types.ts";
 import { loadPost } from "../../services/posts/index.ts";
 import { CSS } from "$gfm/mod.ts";
 import { Head } from "$fresh/runtime.ts";
+import Header from "../../components/header/index.tsx";
 
 
 export const handler: Handlers = {
@@ -25,7 +26,8 @@ export default function PostPage(props: PageProps): JSX.Element {
         <meta name="description" content={post.excerpt} />
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
-      <main class="p-4 flex flex-col leading-normal bg-gray-50 h-screen">
+        <Header />
+      <main class="p-6 flex flex-col leading-normal bg-gray-50 h-screen">
         <article class="p-6 mb-6 border border-gray-40 lg:border-gray-400 bg-white rounded" itemScope itemType="http://schema.org/BlogPosting">
           <header class="mb-6">
             <h1 itemProp="headline" class="text-4xl">{post.title}</h1>
