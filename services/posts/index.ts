@@ -12,7 +12,7 @@ export async function loadPost(slug: string): Promise<Post | null> {
 
   const { body, attrs }: ExtractedContent = extract(raw);
   const post: Post = {
-    slug,
+    slug: `/posts/${slug}/`,
     title: attrs.title,
     body: render(body),
     date: new Date(attrs.date as string),
@@ -21,3 +21,17 @@ export async function loadPost(slug: string): Promise<Post | null> {
 
   return post;
 }
+
+export async function listPosts(): Promise<Post[]> {
+  const posts: Promise<Post | null>[] = []
+
+  for await(const entry of Deno.readDir("./content/posts/")) {
+    const {name} = entry;
+    const [id] = name.split(".");
+  
+    posts.push(loadPost(id));
+  }
+
+  return await Promise.all(posts) as Post[];
+}
+

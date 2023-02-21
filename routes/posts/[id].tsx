@@ -5,6 +5,7 @@ import { loadPost } from "../../services/posts/index.ts";
 import { CSS } from "$gfm/mod.ts";
 import { Head } from "$fresh/runtime.ts";
 
+
 export const handler: Handlers = {
   async GET(_request: Request, context: HandlerContext) {
     const { id } = context.params;
@@ -28,7 +29,9 @@ export default function PostPage(props: PageProps): JSX.Element {
         <article itemScope itemType="http://schema.org/BlogPosting">
           <header class="mb-6">
             <h1 itemProp="headline" class="text-4xl">{post.title}</h1>
-            <time itemProp="datePublished">{Intl.DateTimeFormat().format(post.date)}</time>
+            <time itemProp="datePublished">
+              {Intl.DateTimeFormat().format(post.date)}
+            </time>
           </header>
           <div
             class="markdown-body"

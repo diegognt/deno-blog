@@ -1,20 +1,24 @@
 ---
-title: Hello world, the first post
+title: Hello Deno fresh, the first post.
 date: 2023-02-20
-excerpt: This is the first post
+excerpt: This is the first post of the blog.
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+This blog has been built to know better the [Deno Fresh](https://fresh.deno.dev/) framework and understand his complexity.
 
-Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+To have a new Deno Fresh project on your local machine,
 
-This a post that is the first and may change.
-
-- List item one
-- List item two
-
-To run locally a Deno Fresh project run,
+1. Create a local project of `Deno fresh`, please run the following command,
 ```sh
-deno task start
-
+deno run -A -r https://fresh.deno.dev my-project
 ```
+
+2. Change into the new directory created by the previous command by running,
+~~~sh
+cd my-project
+~~~
+
+3. Start a local server by running,
+~~~sh
+deno task start
+~~~ 
