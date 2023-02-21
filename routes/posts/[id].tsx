@@ -25,8 +25,8 @@ export default function PostPage(props: PageProps): JSX.Element {
         <meta name="description" content={post.excerpt} />
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
-      <main class="p-4">
-        <article itemScope itemType="http://schema.org/BlogPosting">
+      <main class="p-4 flex flex-col leading-normal bg-gray-50 h-screen">
+        <article class="p-6 mb-6 border border-gray-40 lg:border-gray-400 bg-white rounded" itemScope itemType="http://schema.org/BlogPosting">
           <header class="mb-6">
             <h1 itemProp="headline" class="text-4xl">{post.title}</h1>
             <time itemProp="datePublished">
