@@ -23,7 +23,7 @@ export default function Home(props: PageProps): JSX.Element {
         <meta name="description" content="A dummy blog running on Deno Fresh" />
       </Head>
       <Header />
-      <main class="p-6 flex flex-col leading-normal bg-gray-50 h-screen">
+      <main class="px-6 pt-28 pb-12 flex flex-col justify-start items-center leading-normal bg-gray-50 h-screen">
         {posts ? posts.map((post: Post) => <Card data={post} />) : null}
       </main>
     </>

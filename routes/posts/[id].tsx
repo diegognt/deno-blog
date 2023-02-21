@@ -27,7 +27,7 @@ export default function PostPage(props: PageProps): JSX.Element {
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
         <Header />
-      <main class="p-6 flex flex-col leading-normal bg-gray-50 h-screen">
+      <main class="px-6 pt-28 pb-12 flex flex-col leading-normal bg-gray-50 h-screen">
         <article class="p-6 mb-6 border border-gray-40 lg:border-gray-400 bg-white rounded" itemScope itemType="http://schema.org/BlogPosting">
           <header class="mb-6">
             <h1 itemProp="headline" class="text-4xl">{post.title}</h1>
