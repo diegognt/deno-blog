@@ -5,7 +5,7 @@ import {
   assertNotEquals,
   assertStringIncludes,
 } from "$std/testing/asserts.ts";
-import { assertSpyCalls, returnsNext, stub, spy, assertSpyCall } from "$std/testing/mock.ts";
+import { assertSpyCalls, returnsNext, stub, assertSpyCall } from "$std/testing/mock.ts";
 import { describe, it } from "$std/testing/bdd.ts";
 import { Post } from "./@types.ts";
 
@@ -24,7 +24,7 @@ describe("The 'loadPost()' function", () => {
 
     // Assertions
     assertNotEquals(post, null);
-    assertEquals(post?.slug, "hello-world");
+    assertEquals(post?.slug, "/posts/hello-world/");
     assertStringIncludes(post?.title as string, "the first post");
     assertInstanceOf(post?.date, Date);
   });
