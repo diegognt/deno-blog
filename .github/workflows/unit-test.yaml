@@ -1,5 +1,8 @@
 name: Pull request checks
-on: 
+on:
+  push:
+    branches:
+      - main
   pull_request:
     types:
       - opened
