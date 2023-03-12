@@ -1,7 +1,7 @@
-
 import IconBrandDeno from "$icons/tsx/brand-deno.tsx";
+import { JSX } from "preact/jsx-runtime";
 
-export default function Header() {
+export function Header(): JSX.Element {
   return (
     <header role="banner" class="fixed top-0 left-0 right-0 bg-white w-screen py-6 px-8 flex flex-col md:flex-row gap-4 border-b-1 border-gray-500">
       <a href="/" class="flex items-center flex-1">

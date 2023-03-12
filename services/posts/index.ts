@@ -1,4 +1,4 @@
-import { ExtractedContent, Post } from "./@types.ts";
+import { ExtractedContent, Post } from "./index.types.ts";
 import { extract, test } from "$std/encoding/front_matter/any.ts";
 import { render } from "$gfm/mod.ts";
 
@@ -7,7 +7,7 @@ export async function loadPost(slug: string): Promise<Post | null> {
     `./content/posts/${slug}.md`,
   ).catch(() => null);
 
-  if (!raw) return null;
+  if (raw === null || !raw) return null;
   if (!test(raw)) return null;
 
   const { body, attrs }: ExtractedContent = extract(raw);
