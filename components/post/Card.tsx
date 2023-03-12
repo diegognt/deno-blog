@@ -1,5 +1,5 @@
 import { JSX } from "preact/jsx-runtime";
-import { Post } from "../../services/posts/@types.ts";
+import { Post } from "../../services/posts/index.types.ts";
 import IconCalendar from "$icons/tsx/calendar.tsx";
 type Props = {
   data: Post;

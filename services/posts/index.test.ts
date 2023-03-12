@@ -12,7 +12,7 @@ import {
   stub,
 } from "$std/testing/mock.ts";
 import { describe, it } from "$std/testing/bdd.ts";
-import { Post } from "./@types.ts";
+import { Post } from "./index.types.ts";
 import {
   badFrontMatter,
   emptyAsyncIterable,

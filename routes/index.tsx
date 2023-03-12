@@ -1,10 +1,10 @@
 import { Head } from "$fresh/runtime.ts";
 import { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
 import { JSX } from "preact/jsx-runtime";
-import Header from "../components/header/index.tsx";
 import { Card } from "../components/post/Card.tsx";
-import { Post } from "../services/posts/@types.ts";
+import { Post } from "../services/posts/index.types.ts";
 import { listPosts } from "../services/posts/index.ts";
+import { Header } from "../components/Header.tsx";
 
 export const handler: Handlers = {
   async GET(_request: Request, context: HandlerContext) {
