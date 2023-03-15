@@ -8,6 +8,5 @@ export type Post = {
 
 export type ExtractedContent = {
   body: string;
-  attrs: Record<string, string>
+  attrs: Record<string, string>;
 };
-

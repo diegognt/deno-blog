@@ -11,7 +11,7 @@ export function Footer(): JSX.Element {
           <small class="text-gray-500">Software Engineer</small>
         </section>
         <section class="flex-1 text-gray-500 space-y-2 text-xs text-center md:text-right">
-            Copyright © 2023<br />All right reserved.
+          Copyright © 2023<br />All right reserved.
         </section>
       </div>
     </footer>

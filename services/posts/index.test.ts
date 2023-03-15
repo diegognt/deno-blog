@@ -37,7 +37,10 @@ describe("The 'loadPost()' function", () => {
       assertNotEquals(post, null);
       assertEquals(post?.slug, "/posts/hello-world/");
       assertStringIncludes(post?.title as string, "Hello Deno fresh");
-      assertStringIncludes(post?.excerpt as string, "the first post of the blog");
+      assertStringIncludes(
+        post?.excerpt as string,
+        "the first post of the blog",
+      );
       assertInstanceOf(post?.date, Date);
     } finally {
       extractStub.restore();
