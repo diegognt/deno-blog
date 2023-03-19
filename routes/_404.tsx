@@ -1,6 +1,6 @@
 import { UnknownPageProps } from "$fresh/server.ts";
 import { Footer } from "../components/Footer/index.tsx";
-import { Header } from "../components/Header.tsx";
+import { Header } from "../components/Header/index.tsx";
 
 export default function NotFoundPage({ url }: UnknownPageProps) {
   return (

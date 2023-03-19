@@ -4,7 +4,7 @@ import { JSX } from "preact/jsx-runtime";
 import { Card } from "../components/post/Card.tsx";
 import { Post } from "../services/posts/index.types.ts";
 import { listPosts } from "../services/posts/index.ts";
-import { Header } from "../components/Header.tsx";
+import { Header } from "../components/Header/index.tsx";
 import { Footer } from "../components/Footer/index.tsx";
 
 export const handler: Handlers = {
