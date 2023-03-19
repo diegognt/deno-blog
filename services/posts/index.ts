@@ -1,6 +1,14 @@
 import { ExtractedContent, Post } from "./index.types.ts";
-import { extract, test } from "$std/encoding/front_matter/any.ts";
+import {
+  createExtractor,
+  Format,
+  Parser,
+  test,
+} from "$std/front_matter/mod.ts";
+import { parse as parseYAML } from "$std/yaml/parse.ts";
 import { render } from "$gfm/mod.ts";
+
+const extractYAML = createExtractor({ [Format.YAML]: parseYAML as Parser });
 
 export async function loadPost(slug: string): Promise<Post | null> {
   const raw: string | null = await Deno.readTextFile(
@@ -10,7 +18,7 @@ export async function loadPost(slug: string): Promise<Post | null> {
   if (raw === null || !raw) return null;
   if (!test(raw)) return null;
 
-  const { body, attrs }: ExtractedContent = extract(raw);
+  const { body, attrs }: ExtractedContent = extractYAML<{ title: string }>(raw);
   const post: Post = {
     slug: `/posts/${slug}/`,
     title: attrs.title,
