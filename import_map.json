@@ -2,7 +2,7 @@
   "imports": {
     "$icons/": "https://deno.land/x/tabler_icons_tsx@0.0.2/",
     "$gfm/": "https://deno.land/x/gfm@0.2.0/",
-    "$std/": "https://deno.land/std@0.179.0/",
+    "$std/": "https://deno.land/std@0.180.0/",
     "$fresh/": "https://deno.land/x/fresh@1.1.4/",
     "@linkedom": "https://esm.sh/linkedom@0.14.25",
     "preact": "https://esm.sh/preact@10.11.0",
