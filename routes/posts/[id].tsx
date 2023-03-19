@@ -4,7 +4,7 @@ import { Post } from "../../services/posts/index.types.ts";
 import { loadPost } from "../../services/posts/index.ts";
 import { CSS } from "$gfm/mod.ts";
 import { Head } from "$fresh/runtime.ts";
-import { Header } from "../../components/Header.tsx";
+import { Header } from "../../components/Header/index.tsx";
 import { Footer } from "../../components/Footer/index.tsx";
 
 export const handler: Handlers = {
